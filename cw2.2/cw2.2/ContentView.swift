@@ -10,9 +10,12 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack{
+            Text("")
+        Image("")
             Text ("iOS")
-                .padding()
-                .background(.yellow)
+                .padding( .all, 100.0 )
+                .frame(height: 10)
+                .background(.black)
                 .foregroundColor(.white)
                 .font(.headline)
             Text ("Android")
@@ -29,5 +32,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .padding(-1.0)
     }
 }
