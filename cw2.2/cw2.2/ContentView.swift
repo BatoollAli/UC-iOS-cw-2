@@ -8,30 +8,43 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var pressed = false
+    @State  var image = "q"
     var body: some View {
         VStack{
             Text("ما هو مسارك المفضل")
                 .fontWeight(.bold)
                 .foregroundColor(Color.black)
                 .font(.system(size: 40))
-            Image("q")
+            Image(image)
+                .resizable()
+                .scaledToFit()
+                .frame(width: 250, height: 100, alignment: .center)
             Text ("iOS")
                 .frame(width: 250, height: 100, alignment: .center).background(.black).cornerRadius(50) .onTapGesture {
-                    Image("iOS")
+                    image = "iOS"
                 }
             
             
             Text ("Android")
                 .frame(width: 250, height: 100, alignment: .center).background(.black).cornerRadius(50)
+                .onTapGesture {
+                    image = "android"
+                }
             
-                .frame(width: 250, height: 100, alignment: .center).background(.black).cornerRadius(50)
+            
+        
             
             Text ("gamedev")
                 .frame(width: 250, height: 100, alignment: .center).background(.black).cornerRadius(50)
+                .onTapGesture {
+                    image = "gameDev"
+                }
             
             Text ("Web")
                 .frame(width: 250, height: 100, alignment: .center).background(.black).cornerRadius(50)
+                .onTapGesture {
+                    image = "web"
+                }
             
             
             
