@@ -18,15 +18,15 @@ struct ContentView: View {
             Image(image)
                 .resizable()
                 .scaledToFit()
-                .frame(width: 250, height: 100, alignment: .center)
+                .frame(width: 300, height: 300, alignment: .center)
             Text ("iOS")
-                .frame(width: 250, height: 100, alignment: .center).background(.black).cornerRadius(50) .onTapGesture {
+                .frame(width: 250, height: 100, alignment: .center).background(Color(hue: 0.525, saturation: 0.813, brightness: 0.959)).cornerRadius(50) .onTapGesture {
                     image = "iOS"
                 }
             
             
             Text ("Android")
-                .frame(width: 250, height: 100, alignment: .center).background(.black).cornerRadius(50)
+                .frame(width: 250, height: 100, alignment: .center).background(.green).cornerRadius(50)
                 .onTapGesture {
                     image = "android"
                 }
@@ -35,13 +35,13 @@ struct ContentView: View {
         
             
             Text ("gamedev")
-                .frame(width: 250, height: 100, alignment: .center).background(.black).cornerRadius(50)
+                .frame(width: 250, height: 100, alignment: .center).background(.red).cornerRadius(50)
                 .onTapGesture {
                     image = "gameDev"
                 }
             
             Text ("Web")
-                .frame(width: 250, height: 100, alignment: .center).background(.black).cornerRadius(50)
+                .frame(width: 250, height: 100, alignment: .center).background(.blue).cornerRadius(50)
                 .onTapGesture {
                     image = "web"
                 }
